@@ -1,0 +1,106 @@
+.stack {
+  display: grid;
+  padding: 10px 16px 14px;
+}
+
+.panel {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(30px, 8.6vw, 38px);
+  line-height: 1;
+  color: var(--plum);
+  text-wrap: balance;
+}
+
+.supporting {
+  margin-top: 8px;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--muted);
+  text-wrap: balance;
+}
+
+.body {
+  margin-top: 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+/* reserves space for up to three lines so tapping never moves anything */
+.reveal {
+  margin-top: auto;
+  padding-top: 12px;
+  min-height: 3.9em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.message {
+  color: var(--plum);
+}
+
+.hintText {
+  color: var(--muted);
+  letter-spacing: 0.2em;
+}
+
+.heart {
+  display: inline-block;
+  font-size: 9px;
+  color: var(--pink);
+  vertical-align: -1px;
+}
+
+@media (min-width: 480px) {
+  .stack {
+    padding: 12px 22px 16px;
+  }
+  .body {
+    font-size: 15px;
+  }
+  .reveal {
+    font-size: 11px;
+  }
+}
+
+@media (max-height: 640px) {
+  .stack {
+    padding: 6px 12px 10px;
+  }
+  .title {
+    font-size: 27px;
+    margin-top: 8px;
+  }
+  .supporting {
+    font-size: 12.5px;
+    margin-top: 5px;
+  }
+  .body {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-top: 5px;
+  }
+  .reveal {
+    min-height: 3.2em;
+    padding-top: 6px;
+    font-size: 9px;
+  }
+}

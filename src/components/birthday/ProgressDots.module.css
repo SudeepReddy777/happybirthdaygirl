@@ -1,0 +1,18 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.seg {
+  display: block;
+  width: 30px;
+  height: 5px;
+  border-radius: 3px;
+  background: #e8cfe2;
+  transition: background-color 260ms var(--ease-out);
+}
+
+.on {
+  background: var(--pink);
+}

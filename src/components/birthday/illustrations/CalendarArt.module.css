@@ -1,0 +1,58 @@
+.counter {
+  position: absolute;
+  left: 50%;
+  top: 31%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  pointer-events: none;
+  text-align: center;
+}
+
+.number {
+  font-family: var(--font-pixel);
+  font-weight: 700;
+  font-size: clamp(30px, 8.6vw, 40px);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--plum);
+  font-variant-numeric: tabular-nums;
+  min-width: 3ch;
+}
+
+.unit {
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--plum);
+  padding-left: 0.3em;
+}
+
+.range {
+  margin-top: 6px;
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* centred on the highlighted cell (column 6, row 2 of the grid) */
+.stampPos {
+  position: absolute;
+  left: 62.5%;
+  top: 85.6%;
+  width: 28px;
+  height: 26px;
+  margin: -13px 0 0 -14px;
+  pointer-events: none;
+}
+
+.stamp {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}

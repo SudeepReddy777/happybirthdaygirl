@@ -1,0 +1,97 @@
+.scene {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 20px 22px;
+  text-align: center;
+}
+
+.bunting {
+  width: calc(100% + 40px);
+  max-width: 600px;
+  padding: 0 6px;
+}
+
+.cat {
+  margin-top: 4px;
+}
+
+.subtitle {
+  margin-top: 16px;
+  max-width: 30ch;
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  line-height: 1.7;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  color: var(--plum);
+}
+
+.heart {
+  display: inline-block;
+  font-size: 9px;
+  vertical-align: -1px;
+}
+
+.heading {
+  margin-top: clamp(10px, 2.4dvh, 22px);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(40px, 12.6vw, 64px);
+  line-height: 0.9;
+  letter-spacing: 0.005em;
+  color: var(--plum);
+  outline: none;
+}
+
+.line {
+  display: block;
+}
+
+.second {
+  margin-top: 0.02em;
+}
+
+.intro {
+  margin-top: clamp(14px, 2.6dvh, 24px);
+  max-width: 34ch;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.action {
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+@media (max-height: 640px) {
+  .bunting {
+    display: none;
+  }
+  .scene {
+    padding-bottom: 14px;
+  }
+  .action {
+    padding-top: 12px;
+  }
+}
+
+@media (min-width: 480px) {
+  .scene {
+    padding: 6px 32px 30px;
+  }
+  .bunting {
+    width: calc(100% + 64px);
+  }
+  .subtitle {
+    font-size: 11px;
+  }
+  .intro {
+    font-size: 15px;
+  }
+}

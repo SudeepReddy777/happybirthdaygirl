@@ -1,0 +1,24 @@
+.bubble {
+  position: absolute;
+  display: block;
+  width: 52px;
+  height: 48px;
+  padding: 0;
+  background: transparent;
+  border-radius: 12px;
+}
+
+/* the "typing" dots pulse a few times when the panel loads, then rest */
+.dot {
+  animation: pulse 900ms ease-in-out 3 both;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,148 @@
+.scene {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 20px 22px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.piece {
+  position: absolute;
+  top: 0;
+  display: block;
+  border-radius: 1px;
+  border: 1.5px solid var(--line);
+}
+
+.micro {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--plum);
+}
+
+.heart {
+  display: inline-block;
+  font-size: 9px;
+  vertical-align: -1px;
+}
+
+.cake {
+  position: relative;
+  width: clamp(168px, min(68vw, 36dvh), 290px);
+  margin-top: clamp(10px, 3dvh, 30px);
+}
+
+/* big, forgiving tap area over the candles and the top tier */
+.candles {
+  position: absolute;
+  left: 18%;
+  top: 6%;
+  width: 64%;
+  height: 52%;
+  cursor: pointer;
+  border-radius: 14px;
+  background: transparent;
+}
+
+/* both states share one cell, so nothing moves when the wish is revealed */
+.texts {
+  display: grid;
+  width: 100%;
+  margin-top: clamp(10px, 2.4dvh, 22px);
+}
+
+.instruction,
+.wish {
+  grid-area: 1 / 1;
+}
+
+.instruction {
+  align-self: start;
+  padding-top: 6px;
+  max-width: 24ch;
+  margin-inline: auto;
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: 0.18em;
+  color: var(--plum);
+  transition: opacity 0.3s;
+}
+
+.wish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.message {
+  max-width: 32ch;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(38px, 11.4vw, 58px);
+  line-height: 0.95;
+  color: var(--plum);
+  text-wrap: balance;
+}
+
+.actions {
+  display: grid;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.slot {
+  grid-area: 1 / 1;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+@media (min-width: 480px) {
+  .scene {
+    padding: 22px 32px 30px;
+  }
+  .message {
+    font-size: 15px;
+  }
+  .instruction {
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 640px) {
+  .scene {
+    padding: 10px 16px 14px;
+  }
+  .headline {
+    font-size: 34px;
+  }
+  .message {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .wish {
+    gap: 8px;
+  }
+}

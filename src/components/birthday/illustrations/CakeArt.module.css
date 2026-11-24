@@ -1,0 +1,25 @@
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.flame {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: flicker 1.6s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    transform: scale(1, 1) rotate(0deg);
+  }
+  35% {
+    transform: scale(0.96, 1.07) rotate(-2.5deg);
+  }
+  70% {
+    transform: scale(1.03, 0.95) rotate(2deg);
+  }
+}

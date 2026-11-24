@@ -1,0 +1,6 @@
+.svg {
+  display: block;
+  width: clamp(170px, 56vw, 240px);
+  height: auto;
+  overflow: visible;
+}

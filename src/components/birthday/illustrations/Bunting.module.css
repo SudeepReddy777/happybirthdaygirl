@@ -1,0 +1,57 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border-radius: 6px;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 54px;
+}
+
+.drop,
+.wave {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+}
+
+/* flags drop in once, staggered */
+.drop {
+  animation: drop 520ms var(--ease-out) both;
+}
+
+/* tap: a quick wave travels along the garland */
+.wave {
+  animation: flutter 720ms ease-in-out both;
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: scaleY(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes flutter {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(16deg);
+  }
+  55% {
+    transform: rotate(-12deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+}
